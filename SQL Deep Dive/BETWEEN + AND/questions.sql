@@ -3,9 +3,13 @@
 
 /*
 * Write your query here
-*/
+*/SELECT firstname,lastname,age,income
+from "public"."customers"
+where age between 30 and 50 and income <=50000
 
 -- What is the average income between the ages of 20 and 50? (Including 20 and 50)
 /*
 * Write your query here
-*/
+*/SELECT avg(income)
+from "public"."customers"
+where age between 20 and 50
