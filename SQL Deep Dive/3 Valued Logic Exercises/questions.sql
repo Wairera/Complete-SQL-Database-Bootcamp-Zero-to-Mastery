@@ -6,7 +6,8 @@
 */
 SELECT address2 
 FROM customers
-
+SELECT COALESCE(address2, 'No Address')
+FROM customers
 /*
 * DB: Store
 * Table: customers
@@ -17,6 +18,9 @@ SELECT *
 FROM customers
 WHERE COALESCE(address2, null) IS NOT null;
 
+SELECT *
+FROM customers
+WHERE address2 IS NOT null
 /*
 * DB: Store
 * Table: customers
